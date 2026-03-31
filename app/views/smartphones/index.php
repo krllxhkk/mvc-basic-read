@@ -17,6 +17,15 @@
                 </div>
         </div>
     </div>
+    <!-- Knop voor het maken van een nieuw smartphone record -->
+<div class="row mt-3 d-flex justify-content-center">
+    <div class="col-10 text-begin text-danger">
+        <a href="<?= URLROOT; ?>/SmartphoneController/create"
+           class="btn btn-warning"
+           role="button">Nieuwe smartphone
+        </a>
+    </div>
+</div>
     <div class="row mb-3 justify-content-center">
     <div class="col-10">
         <table class="table table-striped">
@@ -43,6 +52,11 @@
                     <td><?= $smartphone->Schermgrootte; ?></td>
                     <td><?= $smartphone->Releasedatum; ?></td>
                     <td><?= $smartphone->Megapixels; ?></td>
+                    <td class="text-center">
+                        <a href="<?= URLROOT; ?>/SmartphoneController/update/<?= $smartphone->Id; ?>">
+                            <i class="bi bi-pencil-square text-primary"></i>
+                        </a>
+                    </td>
                     <td class="text-center">
                         <a href="<?= URLROOT; ?>/SmartphoneController/delete/<?= $smartphone->Id; ?>"
                             onclick="return confirm('Weet je zeker dat je dit record wilt verwijderen?');">
